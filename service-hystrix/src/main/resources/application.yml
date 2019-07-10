@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: service-hystrix
+
+server:
+  port: 8600
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+
+#\u5F00\u542F\u65AD\u8DEF\u5668
+feign:
+  hystrix:
+    enabled: true
+
+

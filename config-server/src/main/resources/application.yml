@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/liuzhoujian/springcloud_config.git
+          search-paths: git-repo-config,config
+          username:
+          password:
+      label: master
+
+server:
+  port: 9090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
