@@ -7,9 +7,7 @@ spring:
       server:
         git:
           uri: https://gitee.com/liuzhoujian/springcloud_config.git
-          search-paths: git-repo-config,config
-          username:
-          password:
+          search-paths: git-repo-config
       label: master
 
 server:
@@ -19,3 +17,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

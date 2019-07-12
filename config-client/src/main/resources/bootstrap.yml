@@ -1,31 +1,26 @@
 spring:
   application:
     name: liuzhoujian
+
   cloud:
     config:
-      ##\u8BFB\u53D6git\u4ED3\u5E93\u4E2D\u914D\u7F6E\u6587\u4EF6\u7684\u540E\u7F00
       profile: test
       discovery:
-        ##\u8BFB\u53D6config server\u7684\u6CE8\u518C\u5730\u5740
         service-id: config-server
         enabled: true
+      fail-fast: true
       label: master
+
+server:
+  port: 9092
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka
 
-server:
-  port: 9091
-
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
-###\u5F00\u542Fbus\u5237\u65B0
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: bus-refresh
+        include: bus-refresh
