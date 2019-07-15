@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/liuzhoujian/springcloud_config.git
+          uri: https://gitee.com/liuzhoujian/springcloud_config.git #https://github.com/liuzhoujian/springcloud_config.git
           search-paths: git-repo-config
       label: master
 
